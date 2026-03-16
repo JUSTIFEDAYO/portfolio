@@ -1,0 +1,185 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#f1f5f9;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#3b82f6;
+}
+
+nav a{
+color:#f1f5f9;
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:#3b82f6;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:100px 10%;
+}
+
+.hero-text h2{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+color:#94a3b8;
+margin-bottom:20px;
+}
+
+.hero-image img{
+width:320px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+
+.btn{
+background:#3b82f6;
+padding:12px 25px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#2563eb;
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 10%;
+}
+
+h2{
+margin-bottom:25px;
+font-size:32px;
+color:#3b82f6;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-5px);
+background:#334155;
+}
+
+/* PROJECTS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.project{
+background:#1e293b;
+border-radius:10px;
+padding:20px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+}
+
+.project-image img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.project h3{
+margin-bottom:10px;
+}
+
+.project p{
+color:#94a3b8;
+}
+
+/* CONTACT */
+
+#contact p{
+margin-top:10px;
+color:#94a3b8;
+}
+
+/* FOOTER */
+
+footer{
+background:#020617;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+.skills-grid{
+grid-template-columns:1fr;
+}
+
+}
