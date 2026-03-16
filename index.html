@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel | Frontend Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>IFELEXDAN</h1>
+<button id="darkMode">🌙</button>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<img src="images/create.jpg.jpg" alt="Daniel profile picture" class="profile-pic">
+
+<h2>Hello, I'm Daniel</h2>
+
+<p>A passionate Frontend Developer building modern websites.</p>
+<p>I am a <span id="typing"></span></p>
+
+<a href="#projects" class="btn">View My Work</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a frontend developer passionate about creating
+responsive and user-friendly websites using HTML,
+CSS and JavaScript.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills-grid">
+
+<div>HTML</div>
+<div>CSS</div>
+<div>JavaScript</div>
+<div>Responsive Design</div>
+<div>Flexbox</div>
+<div>CSS Grid</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project">
+
+<img src="images/port.jpg.jpg" alt="Project screenshot">
+
+<h3>Portfolio Website</h3>
+
+<p>A personal portfolio website showcasing my work.</p>
+
+<!-- <a href="#">Live Demo</a> -->
+
+</div>
+
+<div class="project">
+
+<img src="images/restaurant.jpg.jpg" alt="Project screenshot">
+
+<h3>Restaurant Website</h3>
+
+<p>A responsive restaurant landing page.</p>
+
+<!-- <a href="#">Live Demo</a> -->
+
+</div>
+
+<div class="project">
+
+<img src="images/landpage.jpg.jpg" alt="Project screenshot">
+
+<h3>Product Landing Page</h3>
+
+<p>A modern landing page for a product.</p>
+
+<!-- <a href="#">Live Demo</a> -->
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<p>Email: ifelexdan@gmail.com</p>
+
+<p>GitHub: github.com/justifedayo</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 ifelexdan | All Rights Reserved</p>
+
+</footer>
+<script>
+
+const text = ["Frontend Developer", "Website Designer", "UI Builder"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
+}
+
+setTimeout(type,150);
+
+})();
+
+const button = document.getElementById("darkMode");
+
+button.onclick = function(){
+document.body.classList.toggle("dark");
+}
+
+</script>
+
+</body>
+</html>
